@@ -44,7 +44,7 @@ public class FpsMeter {
     }
 
     public void draw(Canvas canvas, float offsetx, float offsety) {
-        canvas.drawText(strfps, 120 + offsetx, 10 + 50 + offsety, paint);
+        canvas.drawText(strfps, 150 + offsetx, 10 + 50 + offsety, paint);
     }
 
 }

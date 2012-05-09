@@ -48,7 +48,7 @@ public class CarPlateDetectActivity extends Activity {
     public static RelativeLayout detectLayout;
     private SeekBar seekBar;
     private Button back;
-    
+
     public static LinearLayout resultLayout;
     private Button resultBack;
     public static ImageView result;
@@ -59,7 +59,7 @@ public class CarPlateDetectActivity extends Activity {
     private static Context context;
     public static Mat detectResult;
     private static Bitmap bmp;
-    public static float         minCarPlateSize = 0.2f;
+    public static float         minCarPlateSize = 0.2f; 
     public static Handler handler = new Handler() {
         public void handleMessage(Message msg) {
             if (!Thread.currentThread().isInterrupted()) {
@@ -106,7 +106,16 @@ public class CarPlateDetectActivity extends Activity {
         setContentView(frameLayout);
     }
     
-    private void initViews() {
+    
+    
+    @Override
+	protected void onDestroy() {
+    	detectResult = null;
+    	bmp = null;
+    	super.onDestroy();
+	}
+
+	private void initViews() {
     	carPlateDectView = new CarPlateDetectView(this);
     	frameLayout = new FrameLayout(this);
     	frameLayout.addView(carPlateDectView);

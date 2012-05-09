@@ -2,26 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/bg2"
+    android:gravity="center"
     android:orientation="horizontal" >
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="50dip"
-        android:layout_marginRight="50dip"
-        android:gravity="center" >
+        android:layout_height="match_parent" >
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="240dip"
             android:layout_height="180dip"
-            android:background="@drawable/picture_frame"
+            android:layout_gravity="center"
             android:src="@drawable/main" />
-    </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/asf" />
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="120dip"
+        android:layout_marginLeft="20dip"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical" >
@@ -30,38 +37,46 @@
             android:id="@+id/detect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/anniu"
             android:text="检测模式" />
 
         <Button
             android:id="@+id/record"
-            android:layout_marginTop="20dip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/anniu"
             android:text="记录模式" />
 
         <Button
             android:id="@+id/doc"
-            android:layout_marginTop="20dip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/anniu"
+            android:layout_marginTop="20dip"
             android:text="记录结果" />
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dip" >
+
         <Button
             android:id="@+id/help"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_help"/>
+            android:layout_marginTop="20dip"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/help" />
 
         <Button
             android:id="@+id/exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginBottom="20dip"
             android:layout_alignParentBottom="true"
-            android:background="@android:drawable/ic_menu_close_clear_cancel"/>"
+            android:background="@drawable/exit" />
+"
     </RelativeLayout>
 
 </LinearLayout>

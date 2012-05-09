@@ -55,13 +55,17 @@ public class MainActivity extends Activity{
 		doc.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+				Intent intent = new Intent();
+                intent.setClass(MainActivity.this, DocActivity.class);
+                startActivity(intent);
 			}
 		});
 		help.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
+				Intent intent = new Intent();
+                intent.setClass(MainActivity.this, HelpActivity.class);
+                startActivity(intent);
 			}
 		});
 		exit.setOnClickListener(new View.OnClickListener() {
