@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff" >
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5px"
+            android:text="CarPlateDetect version 0.1"
+            android:textColor="#245DDB"
+            android:textSize="35px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7px"
+            android:gravity="right"
+            android:text="------By Chenyue(陈跃)       "
+            android:textColor="#505050"
+            android:textSize="28px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8px"
+         	android:text="		1、本软件为陈跃的毕业设计演示程序，该版本为测试版本，目前不稳定  \n\n
+
+		2、使用方法：\n
+				A、进行检测模式后可以检测当前摄像头拍摄到的图像中是否有车牌，如果检测出车牌则显示车牌，出现正确、错误、保存选项；\n
+				B、图像默认保存在SD卡中，软件会在SD卡张创建一个carplatedatect的文件夹，如果没有SD卡，请不要查看结果，否则程序会崩溃；\n
+				C、目前记录模式只能检测，并没有记录功能\n\n
+
+		3、致谢\n
+			感谢于老师对毕业设计的深切指导\n
+			感谢各位关心我的同学和朋友们\n
+
+		"
+            android:textColor="#505050"
+            android:textSize="28px" />
+    </LinearLayout>
+
+</ScrollView>
